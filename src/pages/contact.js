@@ -46,10 +46,10 @@ const contact = ({ data }) => {
           </div>
           <div className="address">
             <h4>
-              RADNO VRIJEME <BsFillClockFill className="icon"></BsFillClockFill>
+              RADNO VREME <BsFillClockFill className="icon"></BsFillClockFill>
             </h4>
             <div className="time">
-              <span>Ponedeljak - Cetvrtak</span>
+              <span>Ponedeljak - Četvrtak</span>
               <span>8 am - 8 pm</span>
             </div>
             <div className="time">
@@ -76,38 +76,55 @@ const contact = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="section-center map">
-          <article className=" contact-form">
-            <h3>Za upite i nedoumice</h3>
-            <form className="form-group">
+        <div className="section-center form-container">
+          <h2>ZAKAŽITE ONLINE PREGLED</h2>
+          <p>
+            Nakon što prosledite obrazac, predstavnik će vas ponovo kontaktirati
+            sa informacijama koje će vam biti potrebne da zakažete sastanak.
+          </p>
+          <form className="form-group">
+            <div className="credencial-container">
               <div>
+                <label htmlFor="name">VAŠE IME</label>
                 <input
                   type="text"
                   name="name"
-                  placeholder="ime"
+                  placeholder="Unesite ime"
                   className="form-control"
                 />
+              </div>
+              <div>
+                <label htmlFor="email">VAŠ EMAIL</label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Unesite Vaš email"
                   className="form-control"
                 />
+              </div>
+            </div>
+            <div className="message-container">
+              <div>
+                <label htmlFor="message">VAšA PORUKA</label>
                 <textarea
                   name="message"
                   rows="5"
-                  placeholder="poruka"
+                  placeholder="Opišite Vaš problem"
                   className="form-control"
                 ></textarea>
               </div>
-              <button type="submit" className="submit-btn btn">
+            </div>
+            <div className="btn-container">
+              <button type="submit" className="submit-btn">
                 pošalji
               </button>
-            </form>
-          </article>
+            </div>
+          </form>
+        </div>
+        <div className="section-center map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46393.86333269222!2d19.63479187736095!3d43.38504307913142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757f8f0cf7fb1e5%3A0x2480c811ef3e7ab!2s6.%20aprila%2C%20Prijepolje%2C%20Serbia!5e0!3m2!1sen!2sba!4v1669974738727!5m2!1sen!2sba"
-            width="500"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6162718128353!2d19.667622114392778!3d43.38504697774884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757f8f0cf7fb1e5%3A0x2480c811ef3e7ab!2s6.%20aprila%2C%20Prijepolje%2C%20Serbia!5e0!3m2!1sen!2sba!4v1672685192795!5m2!1sen!2sba"
+            width="100%"
             height="400"
             style={{ border: "0", overflow: "hidden", margin: "0" }}
             allowFullScreen=""
@@ -245,57 +262,157 @@ const Wrapper = styled.section`
   }
 
   /*  FORM SECTION */
-  .contact-form {
+  .form-container {
     background: var(--clr-black-4);
     border-radius: var(--radius);
-    text-align: center;
+    text-align: left;
     box-shadow: var(--primary-light-shadow);
     transition: var(--transition);
     width: 90vw;
-    max-width: 35rem;
     margin-bottom: 2rem;
-  }
-  .contact-form:hover {
-    box-shadow: var(--primary-dark-shadow);
-  }
-  .contact-form h3 {
-    padding-top: 1.25rem;
-  }
-  .form-group {
-    padding: 1rem 1.5rem;
+    padding: 2rem 1rem;
+    &:hover {
+      box-shadow: var(--primary-dark-shadow);
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      word-wrap: break-word;
+    }
+    label {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .credencial-container,
+    .message-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        padding-top: 50px;
+        width: 100%;
+        border-bottom: 1px solid #343434;
+        display: flex;
+        flex-direction: column;
+        .form-control {
+          background-color: transparent;
+          padding: 0 !important;
+          font-size: 14px;
+          color: #c2c2c2;
+          height: 39px;
+          border-bottom: 1px solid #343434;
+          &:focus {
+            border-color: #d16527 !important;
+          }
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="range"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="color"],
+        textarea,
+        select,
+        .nice-select {
+          border: none;
+          line-height: 1.923;
+          font-weight: 400;
+          box-shadow: none;
+          width: 100%;
+          outline: none;
+          transition: all 0.2s ease-out;
+          &:focus {
+            transition: all 0.2s ease-out;
+            outline: 0;
+            border-color: var(--clr-orange-1);
+          }
+        }
+      }
+    }
+    .btn-container {
+      padding-top: 50px;
+    }
+
+    //desktop view
+    @media screen and (min-width: 676px) {
+      p {
+        max-width: 50%;
+      }
+      .credencial-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+      }
+    }
   }
 
-  .form-control {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: none;
-    margin-bottom: 1.25rem;
-    background: var(--mainWhite);
-    border-radius: var(--radius);
-    text-transform: uppercase;
-    letter-spacing: var(--spacing);
-  }
-  .form-control::placeholder {
-    font-family: var(--ff-primary);
-    color: var(--clr-black-3);
-    text-transform: uppercase;
-    letter-spacing: var(--spacing);
-  }
   .submit-btn {
-    background-color: var(--clr-orange-1);
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
+    display: inline-block;
+    padding: 13px 30px 10px;
+    background: var(--clr-orange-1);
+    border: 2px solid var(--clr-orange-1);
+    color: var(--mainWhite);
+    box-shadow: var(--dark-shadow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 1.3em;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    clip-path: polygon(
+      20px 0,
+      100% 0,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0 100%,
+      0 20px
+    );
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, #fff, transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%) skewX(-30deg);
+      transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &:hover {
+      background-color: transparent;
+      clip-path: none;
+      &::before {
+        left: 200%;
+      }
+    }
+    //desktop view
+    @media screen and (min-width: 676px) {
+      padding: 18px 29px 15px;
+    }
   }
   .map {
+    padding-top: 100px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 `;

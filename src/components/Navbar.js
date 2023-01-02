@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { FaAlignRight } from "react-icons/fa";
-import { GiAutoRepair } from "react-icons/gi";
+//import { GiAutoRepair } from "react-icons/gi";
 import { HideOn } from "react-hide-on-scroll";
 import Slide from "react-reveal/Slide";
 import logo from "../images/logo-orange.svg";

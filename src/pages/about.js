@@ -6,6 +6,7 @@ import BackgroundImage from "gatsby-background-image";
 
 import { Layout, Title, TeamCard, Button, Seo } from "../components";
 
+/*
 const tags = [
   "HTML",
   "CSS",
@@ -15,7 +16,7 @@ const tags = [
   "NODE.JS",
   "GATSBY.JS",
 ];
-
+*/
 const about = ({ data }) => {
   // Set ImageData.
   const imageData1 = data.desktop1.childImageSharp.fluid;
@@ -86,11 +87,13 @@ const about = ({ data }) => {
             <div className="about-btn-desktop">
               <Button path="/contact">Kontakt</Button>
             </div>
+            {/* 
             <div className="about-stack">
               {tags.map((item, index) => {
                 return <span key={index}>{item}</span>;
               })}
             </div>
+            */}
           </article>
         </div>
         <div className="section-center team">
@@ -243,11 +246,20 @@ const Wrapper = styled.section`
     height: 30rem;
     width: 100%;
     display: block;
+    clip-path: polygon(
+      40px 0,
+      100% 0,
+      100% calc(100% - 40px),
+      calc(100% - 40px) 100%,
+      0 100%,
+      0 40px
+    );
 
     .img {
       width: 100%;
       height: 100%;
       transition: all 200ms linear 0ms;
+      filter: brightness(60%);
       &:hover {
         transform: scale(1.45) rotate(-1.5deg);
       }

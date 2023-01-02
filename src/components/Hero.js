@@ -19,7 +19,7 @@ const Hero = () => {
           svih vozila putničkog, autobuskog i teretnog programa
         </h3>
         <div>
-          <Button path="/">ZAKAŽITE SERVIS</Button>
+          <Button path="/contact">ZAKAŽITE SERVIS</Button>
         </div>
       </article>
 

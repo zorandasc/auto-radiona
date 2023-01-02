@@ -4,8 +4,9 @@ import { Link } from "gatsby";
 import { TfiEmail } from "react-icons/tfi";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BsHouseDoor } from "react-icons/bs";
-import { GiAutoRepair } from "react-icons/gi";
+//import { GiAutoRepair } from "react-icons/gi";
 
+import logo from "../images/logo-orange.svg";
 import socialLinks from "../constants/social_links";
 
 const Footer = () => {
@@ -15,11 +16,12 @@ const Footer = () => {
         <div className="cell">
           <div className="title">
             <Link to="/" className="logo-container">
-               
-              <GiAutoRepair className="logo"></GiAutoRepair>
-              <span className="white">TURBO</span>
-              <span>TIM SERVIS</span>
-             
+              <img src={logo} alt="web dev" className="logo" />
+              {/* 
+            <GiAutoRepair className="logo"></GiAutoRepair>
+            <span className="white">TURBO</span>
+            <span>TIM SERVIS</span>
+          */}
             </Link>
           </div>
           <div className="content">

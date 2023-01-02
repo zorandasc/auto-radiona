@@ -4,6 +4,7 @@ const links = [
     text: "Onama",
     url: "/about",
   },
+  /*
   {
     id: 2,
     text: "Artikli",
@@ -14,6 +15,7 @@ const links = [
     text: "Servisi",
     url: "/services",
   },
+  */
   {
     id: 4,
     text: "Kontakt",
