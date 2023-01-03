@@ -76,6 +76,18 @@ const contact = ({ data }) => {
             </div>
           </div>
         </div>
+        <div className="section-center map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6162718128353!2d19.667622114392778!3d43.38504697774884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757f8f0cf7fb1e5%3A0x2480c811ef3e7ab!2s6.%20aprila%2C%20Prijepolje%2C%20Serbia!5e0!3m2!1sen!2sba!4v1672685192795!5m2!1sen!2sba"
+            width="100%"
+            height="400"
+            style={{ border: "0", overflow: "hidden", margin: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="google map address"
+          ></iframe>
+        </div>
         <div className="section-center form-container">
           <h2>ZAKAŽITE ONLINE PREGLED</h2>
           <p>
@@ -105,7 +117,7 @@ const contact = ({ data }) => {
             </div>
             <div className="message-container">
               <div>
-                <label htmlFor="message">VAšA PORUKA</label>
+                <label htmlFor="message">VAŠA PORUKA</label>
                 <textarea
                   name="message"
                   rows="5"
@@ -120,18 +132,6 @@ const contact = ({ data }) => {
               </button>
             </div>
           </form>
-        </div>
-        <div className="section-center map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6162718128353!2d19.667622114392778!3d43.38504697774884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757f8f0cf7fb1e5%3A0x2480c811ef3e7ab!2s6.%20aprila%2C%20Prijepolje%2C%20Serbia!5e0!3m2!1sen!2sba!4v1672685192795!5m2!1sen!2sba"
-            width="100%"
-            height="400"
-            style={{ border: "0", overflow: "hidden", margin: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="google map address"
-          ></iframe>
         </div>
       </Wrapper>
     </Layout>
@@ -285,6 +285,42 @@ const Wrapper = styled.section`
       font-weight: 700;
       margin-bottom: 3px;
     }
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea,
+    select,
+    .nice-select {
+      font-family: var(--ff-secondary);
+      border: none;
+      line-height: 1.923;
+      font-weight: 400;
+      box-shadow: none;
+      width: 100%;
+      outline: none;
+      transition: all 0.2s ease-out;
+      &:focus {
+        transition: all 0.2s ease-out;
+        outline: 0;
+        border-color: var(--clr-orange-1) !important;
+        &::placeholder {
+          transition: all 0.2s ease-out;
+          font-size: 18px;
+        }
+      }
+    }
     .credencial-container,
     .message-container {
       display: flex;
@@ -295,7 +331,6 @@ const Wrapper = styled.section`
       div {
         padding-top: 50px;
         width: 100%;
-        border-bottom: 1px solid #343434;
         display: flex;
         flex-direction: column;
         .form-control {
@@ -304,41 +339,7 @@ const Wrapper = styled.section`
           font-size: 14px;
           color: #c2c2c2;
           height: 39px;
-          border-bottom: 1px solid #343434;
-          &:focus {
-            border-color: #d16527 !important;
-          }
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="url"],
-        input[type="password"],
-        input[type="search"],
-        input[type="tel"],
-        input[type="number"],
-        input[type="range"],
-        input[type="date"],
-        input[type="month"],
-        input[type="week"],
-        input[type="time"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="color"],
-        textarea,
-        select,
-        .nice-select {
-          border: none;
-          line-height: 1.923;
-          font-weight: 400;
-          box-shadow: none;
-          width: 100%;
-          outline: none;
-          transition: all 0.2s ease-out;
-          &:focus {
-            transition: all 0.2s ease-out;
-            outline: 0;
-            border-color: var(--clr-orange-1);
-          }
+          border-bottom: 2px solid #343434;
         }
       }
     }
@@ -410,7 +411,7 @@ const Wrapper = styled.section`
     }
   }
   .map {
-    padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
