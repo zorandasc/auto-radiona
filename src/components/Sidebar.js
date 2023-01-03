@@ -22,7 +22,7 @@ const Sidebar = () => {
         </button>
       */}
       </div>
-      <div className="side-container">
+      <div className="sidebar-content">
         <ul className="sidebar-links">
           <li>
             <Link to="/" onClick={hideSidebar} activeClassName="active">
@@ -43,7 +43,8 @@ const Sidebar = () => {
             );
           })}
         </ul>
-        <ul className="social-links sidebar-icons">
+        <span className="tel-number">(+381) 656 838 126</span>
+        <ul className="social-links">
           {socialLinks.map((link) => {
             return (
               <li key={link.id}>
@@ -65,7 +66,7 @@ const Sidebar = () => {
 };
 
 const Wrapper = styled.aside`
-  background: var(--clr-black-2);
+  background: var(--clr-black-3);
   position: fixed;
   top: 0;
   left: 0;
@@ -92,6 +93,14 @@ const Wrapper = styled.aside`
     padding: 1rem;
   }
 
+  .sidebar-content {
+    width: 100%;
+  }
+
+  .sidebar-links {
+    margin-bottom: 3rem;
+  }
+
   .sidebar-links li a {
     display: block;
     text-align: center;
@@ -99,6 +108,7 @@ const Wrapper = styled.aside`
     color: var(--mainWhite);
     letter-spacing: var(--spacing);
     padding: 0.5rem 0;
+    margin: 0 1rem;
     font-size: 1.6rem;
     transition: var(--transition);
     border-radius: var(--radius);
@@ -117,6 +127,9 @@ const Wrapper = styled.aside`
     cursor: pointer;
   }
   .social-links {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
     margin-top: 4rem;
     display: flex;
     justify-content: flex-end;
@@ -129,6 +142,37 @@ const Wrapper = styled.aside`
   }
   .social-link:hover {
     color: var(--clr-orange-1);
+  }
+  .tel-number {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.1em;
+    position: relative;
+    display: block;
+    background-color: inherit;
+    overflow: hidden;
+    background-color: initial;
+    padding: 10px 10px;
+    margin: 0 1rem;
+    clip-path: polygon(
+      20px 0,
+      100% 0,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0 100%,
+      0 20px
+    );
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--clr-orange-1);
+    }
   }
   @media screen and (min-width: 992px) {
     transform: translateX(-100%);
