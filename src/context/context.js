@@ -16,6 +16,10 @@ const GatsbyProvider = ({ children }) => {
     setIsSidebarOpen(false);
   };
 
+  const toggleSidebar=()=>{
+    setIsSidebarOpen(!isSidebarOpen);
+  }
+
   useEffect(() => {
     if (window) {
       setSize(window.innerWidth);
@@ -36,7 +40,14 @@ const GatsbyProvider = ({ children }) => {
 
   return (
     <GatsbyContext.Provider
-      value={{ isSidebarOpen, showSidebar, hideSidebar, size, height }}
+      value={{
+        isSidebarOpen,
+        showSidebar,
+        hideSidebar,
+        toggleSidebar,
+        size,
+        height,
+      }}
     >
       {children}
     </GatsbyContext.Provider>

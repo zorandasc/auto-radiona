@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { FaTimes } from "react-icons/fa";
+//import { FaTimes } from "react-icons/fa";
 import { Link } from "gatsby";
 
 import logo from "../images/logo-orange.svg";
@@ -16,9 +16,11 @@ const Sidebar = () => {
         <Link to="/" className="logo-container">
           <img src={logo} alt="web dev" className="logo" />
         </Link>
+        {/* 
         <button className="close-btn" type="button" onClick={hideSidebar}>
           <FaTimes />
         </button>
+      */}
       </div>
       <div className="side-container">
         <ul className="sidebar-links">
@@ -67,7 +69,7 @@ const Wrapper = styled.aside`
   position: fixed;
   top: 0;
   left: 0;
-  width: 95%;
+  width: 80%;
   height: 100%;
   z-index: 999;
   display: grid;
@@ -96,7 +98,7 @@ const Wrapper = styled.aside`
     text-transform: capitalize;
     color: var(--mainWhite);
     letter-spacing: var(--spacing);
-    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
     font-size: 1.6rem;
     transition: var(--transition);
     border-radius: var(--radius);
