@@ -7,6 +7,7 @@ import { BsHouseDoor } from "react-icons/bs";
 //import { GiAutoRepair } from "react-icons/gi";
 
 import logo from "../images/logo-orange.svg";
+import links from "../constants/links";
 import socialLinks from "../constants/social_links";
 
 const Footer = () => {
@@ -31,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="cell">
           <div className="title">KONTAKT</div>
-          <ul className="content kontakt">
+          <ul className="content contact">
             <li>
               <TfiEmail className="icon"></TfiEmail>turbotimservis@gmail.com
             </li>
@@ -41,25 +42,25 @@ const Footer = () => {
             </li>
             <li>
               <BsHouseDoor className="icon"></BsHouseDoor>6 Aprila bb,
-              Prijepolje
+              Prijepolje, Srbija
             </li>
           </ul>
         </div>
         <div className="cell">
           <div className="title">POPULARNI SERVISI</div>
           <ul className="content popular">
-            <li>POPRAVKA GUMA</li>
-            <li>POPRAVKA KOČNICA</li>
-            <li>POPRAVKA MOTORA</li>
-            <li>POPRAVKA AKUMULATORA</li>
-          </ul>
-        </div>
-        <div className="cell">
-          <ul className="content popular popular-2">
-            <li>SISTEM HLAĐENJA</li>
-            <li>PORAVNANJE GUMA</li>
-            <li>STARTOVANJE BATERIJE</li>
-            <li>POPRAVKA SUSPENZIJE</li>
+            <li>
+              <Link to="/">Početna</Link>
+            </li>
+            {links.map((link) => {
+              return (
+                <li key={link.id}>
+                  <Link to={link.url} activeClassName="active">
+                    {link.text}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -67,7 +68,13 @@ const Footer = () => {
       <div className="footer-links social-links">
         {socialLinks.map((link) => {
           return (
-            <a href={link.url} key={link.id} className="social-link">
+            <a
+              href={link.url}
+              key={link.id}
+              className="social-link"
+              target="_blank"
+              rel="noreferrer"
+            >
               {link.icon}
             </a>
           );
@@ -109,12 +116,13 @@ const Wrapper = styled.footer`
     display: flex;
     justify-content: space-around;
     .social-link {
-      font-size: 1.55rem;
+      font-size: 2rem;
       color: var(--mainWhite);
       transition: var(--transition);
       margin: 0 1rem;
       &:hover {
         color: var(--clr-orange-1);
+        transform: scale(1.2);
       }
       p {
         color: var(--mainWhite);
@@ -130,7 +138,7 @@ const Wrapper = styled.footer`
   }
 
   .cell {
-    padding: 1rem;
+    padding:2rem 1rem;
     .title {
       text-align: left;
       padding-bottom: 2rem;
@@ -146,7 +154,7 @@ const Wrapper = styled.footer`
       li {
         padding: 1rem 0;
         display: flex;
-        //justify-content: space-between;
+        text-transform: uppercase;
         align-items: center;
         position: relative;
         .icon {
@@ -158,7 +166,7 @@ const Wrapper = styled.footer`
         margin: 1rem 2rem;
       }
     }
-    .kontakt {
+    .contact {
       li::before {
         content: "";
         position: absolute;
@@ -173,19 +181,13 @@ const Wrapper = styled.footer`
       li::before {
         content: "";
         display: inline-block;
-        width: 5px;
-        height: 5px;
+        width: 8px;
+        height: 8px;
         margin-right: 10px;
         background-color: var(--clr-orange-1);
       }
     }
-    .popular-2 {
-      margin-top: -2rem;
-      @media screen and (min-width: 676px) {
-        margin-top: 0;
-        padding-top: 4rem;
-      }
-    }
+
     .logo-container {
       display: flex;
       align-items: center;
@@ -219,7 +221,7 @@ const Wrapper = styled.footer`
   }
   @media screen and (min-width: 992px) {
     .row {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 `;
