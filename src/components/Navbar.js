@@ -67,7 +67,7 @@ const Wrapper = styled.nav`
   left: 0;
   width: 100%;
   z-index: 400;
-  height: 5rem;
+  height: 5.5rem;
   display: flex;
   align-items: center;
   .wrapperBcg {
@@ -77,7 +77,7 @@ const Wrapper = styled.nav`
     width: 100vw;
     background-color: rgb(0, 0, 0, 0.8);
     z-index: -1;
-    height: 5rem;
+    height: 5.5rem;
     border-bottom: 1px solid var(--clr-orange-1);
     box-shadow: var(--dark-shadow);
   }

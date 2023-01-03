@@ -1,21 +1,25 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-//import { MdClose } from "react-icons/md";
+import { FaTimes } from "react-icons/fa";
 import { Link } from "gatsby";
 
+import logo from "../images/logo-orange.svg";
 import { GatsbyContext } from "../context/context";
 import links from "../constants/links";
 import socialLinks from "../constants/social_links";
-
-import { FaTimes } from "react-icons/fa";
 
 const Sidebar = () => {
   const { isSidebarOpen, hideSidebar } = useContext(GatsbyContext);
   return (
     <Wrapper isSidebarOpen={isSidebarOpen}>
-      <button className="close-btn" type="button" onClick={hideSidebar}>
-        <FaTimes />
-      </button>
+      <div className="sidebar-header">
+        <Link to="/" className="logo-container">
+          <img src={logo} alt="web dev" className="logo" />
+        </Link>
+        <button className="close-btn" type="button" onClick={hideSidebar}>
+          <FaTimes />
+        </button>
+      </div>
       <div className="side-container">
         <ul className="sidebar-links">
           <li>
@@ -75,6 +79,16 @@ const Wrapper = styled.aside`
   transform: ${(props) =>
     props.isSidebarOpen ? "translateX(0)" : "translateX(-100%)"};
   opacity: ${(props) => (props.isSidebarOpen ? "1" : "0")};
+  .sidebar-header {
+    position: absolute;
+    width: 100%;
+    top: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+  }
 
   .sidebar-links li a {
     display: block;
@@ -83,7 +97,7 @@ const Wrapper = styled.aside`
     color: var(--mainWhite);
     letter-spacing: var(--spacing);
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     transition: var(--transition);
     border-radius: var(--radius);
     border-bottom: 1px solid var(--mainWhite);
@@ -94,9 +108,6 @@ const Wrapper = styled.aside`
     color: var(--clr-black-2);
   }
   .close-btn {
-    position: absolute;
-    right: 4.75%;
-    top: 2.75%;
     font-size: 2.5rem;
     background: transparent;
     border-color: transparent;
@@ -109,7 +120,7 @@ const Wrapper = styled.aside`
     justify-content: flex-end;
   }
   .social-link {
-    font-size: 1.55rem;
+    font-size: 1.8rem;
     color: var(--mainWhite);
     transition: var(--transition);
     margin: 0 1rem;

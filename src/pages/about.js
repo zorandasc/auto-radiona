@@ -127,7 +127,7 @@ const about = ({ data }) => {
                 informativan i bez po muke.
               </p>
             </div>
-            <Button path="/">ZAKAŽITE ODMAH</Button>
+            <Button path="/contact">ZAKAŽITE ODMAH</Button>
           </div>
         </BackgroundImage>
       </Wrapper>
