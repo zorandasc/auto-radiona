@@ -117,7 +117,7 @@ const Wrapper = styled.aside`
   .active,
   .sidebar-links li a:hover {
     background: var(--clr-orange-1);
-    color: var(--clr-black-2);
+    color: var(--clr-black-3);
   }
   .close-btn {
     font-size: 2.5rem;
@@ -130,18 +130,21 @@ const Wrapper = styled.aside`
     position: absolute;
     bottom: 5%;
     left: 0;
+    width: 100%;
     margin-top: 4rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
   }
   .social-link {
-    font-size: 1.8rem;
-    color: var(--mainWhite);
+    font-size: 2rem;
+    background-color: var(--clr-orange-1);
+    color: var(--clr-black-2);
     transition: var(--transition);
     margin: 0 1rem;
+    display: flex;
   }
   .social-link:hover {
-    color: var(--clr-orange-1);
+    color: var(--mainWhite);
   }
   .tel-number {
     text-align: center;

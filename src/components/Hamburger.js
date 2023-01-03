@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
     display: block;
-    background-color: blanchedalmond;
+    background-color: var(--mainWhite);
     height: 4px;
     width: 2.5em;
     border-radius: 2px;
