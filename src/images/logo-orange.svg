@@ -6,28 +6,13 @@
    id="Layer_2"
    x="0px"
    y="0px"
-   width="198.67558"
-   height="59.761562"
-   viewBox="0 0 198.67558 59.761564"
+   width="204.91939"
+   height="59.761566"
+   viewBox="0 0 204.91938 59.761568"
    enable-background="new 0 0 1400 980"
    xml:space="preserve"
-   sodipodi:docname="1.svg"
-   inkscape:export-filename="1.svg"
-   inkscape:export-xdpi="95.5"
-   inkscape:export-ydpi="95.5"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   id="namedview620"
-   pagecolor="#505050"
-   bordercolor="#eeeeee"
-   borderopacity="1"
-   inkscape:showpageshadow="0"
-   inkscape:pageopacity="0"
-   inkscape:pagecheckerboard="0"
-   inkscape:deskcolor="#505050"
-   showgrid="false" /><defs
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
    id="defs529" />
 
 
@@ -35,7 +20,7 @@
 <g
    id="g1332"
    transform="matrix(0.4352605,0,0,0.61763493,-118.01016,-333.0206)"><g
-     id="g4627"><g
+     id="g697"><g
        id="XMLID_491_"
        transform="matrix(0.93548306,0,0,0.74885724,6.0588411,290.69171)">
 			<path
@@ -305,18 +290,20 @@
    fill="none"
    d="m 525.025,362.372 c -1.872,0.727 -3.379,0.311 -5.273,-0.195 -1.141,-0.307 -2.232,-0.543 -3.319,-1.055 -0.562,-0.264 -2.109,-1.617 -2.608,-1.611 3.309,-0.041 4.898,-0.471 7.815,-1.563 3.337,-1.25 7.431,-0.514 10.279,1.848 -2.188,-0.734 -4.636,-0.531 -6.583,0.547 -0.406,0.225 -0.816,0.518 -0.95,0.963 -0.135,0.445 0.164,1.05 0.639,1.066 z" />
 		</g><text
-       transform="scale(1.0636738,0.94013785)"
+       transform="scale(0.9964875,1.0035249)"
        id="text523"
-       x="390.96713"
-       y="673.07159"
-       style="font-size:7.2289px;stroke-width:0.602404"><tspan
-         x="390.96713"
-         y="673.07159"
+       x="411.34195"
+       y="628.01489"
+       style="font-size:7.71629px;stroke-width:0.64302"><tspan
+         x="411.34195"
+         y="628.01489"
          fill="#ffffff"
          font-family="Rollbox-ExtraBold"
          font-size="62.0308px"
          id="tspan513"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.2521px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.582653"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.8606px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.582653"
-   id="tspan985">TURBO </tspan>TIM SERVIS</tspan></text></g></g>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.8198px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.621937"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.5481px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.621937"
+           id="tspan985">TURBO </tspan><tspan
+           style="letter-spacing:2.26458px;stroke-width:0.621937"
+           id="tspan621">TIM SERVIS</tspan></tspan></text></g></g>
 </svg>
