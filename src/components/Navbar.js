@@ -80,8 +80,8 @@ const Wrapper = styled.nav`
     background-color: rgb(0, 0, 0, 0.8);
     z-index: -1;
     height: 5.5rem;
-    border-bottom: 1px solid var(--clr-orange-1);
-    box-shadow: var(--dark-shadow);
+    //border-bottom: 1px solid var(--clr-orange-1);
+    box-shadow: var(--primary-dark-shadow);
   }
   .nav-center {
     width: 90vw;

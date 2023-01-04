@@ -7,7 +7,6 @@ import {
   About,
   Prices,
   Works,
-  Works2,
   Seo,
   Advices,
 } from "../components";
@@ -19,7 +18,6 @@ const IndexPage = () => {
       <Counters></Counters>
       <About></About>
       <Works></Works>
-      <Works2></Works2>
       <Advices></Advices>
       <Prices></Prices>
     </Layout>

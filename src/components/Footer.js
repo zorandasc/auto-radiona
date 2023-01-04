@@ -138,7 +138,7 @@ const Wrapper = styled.footer`
   }
 
   .cell {
-    padding:2rem 1rem;
+    padding: 2rem 1rem;
     .title {
       text-align: left;
       padding-bottom: 2rem;
@@ -154,7 +154,6 @@ const Wrapper = styled.footer`
       li {
         padding: 1rem 0;
         display: flex;
-        text-transform: uppercase;
         align-items: center;
         position: relative;
         .icon {
@@ -178,6 +177,9 @@ const Wrapper = styled.footer`
       }
     }
     .popular {
+      li {
+        text-transform: uppercase;
+      }
       li::before {
         content: "";
         display: inline-block;

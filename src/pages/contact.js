@@ -34,18 +34,6 @@ const contact = ({ data }) => {
         <div className="section-center address-center">
           <div className="address">
             <h4>
-              ADRESA{" "}
-              <BsFillHouseDoorFill className="icon"></BsFillHouseDoorFill>
-            </h4>
-            <div className="street">
-              <span>6 April bb, Prijepolje, Srbija</span>
-            </div>
-            <div>
-              <span></span>
-            </div>
-          </div>
-          <div className="address">
-            <h4>
               RADNO VREME <BsFillClockFill className="icon"></BsFillClockFill>
             </h4>
             <div className="time">
@@ -73,6 +61,18 @@ const contact = ({ data }) => {
             </div>
             <div className="tel-email">
               <TfiEmail className="icon"></TfiEmail>turbotimservis@gmail.com
+            </div>
+          </div>
+          <div className="address">
+            <h4>
+              ADRESA{" "}
+              <BsFillHouseDoorFill className="icon"></BsFillHouseDoorFill>
+            </h4>
+            <div className="street">
+              <span>6 April bb, Prijepolje, Srbija</span>
+            </div>
+            <div>
+              <span></span>
             </div>
           </div>
         </div>

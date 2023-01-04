@@ -11,7 +11,6 @@ import Button from "./Button";
 import Prices from "./Prices";
 import Works from "./Works";
 import Works1 from "./Works1";
-import Works2 from "./Works2";
 import WorkCard from "./WorkCard";
 import Seo from "./Seo";
 import Counters from "./Counters"
@@ -31,7 +30,6 @@ export {
   Prices,
   Works,
   Works1,
-  Works2,
   WorkCard,
   Seo,
   Counters,
