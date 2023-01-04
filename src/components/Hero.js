@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import Zoom from "react-reveal/Zoom";
+
 import engineVideo from "../assets/engine.mp4";
 import Button from "./Button";
 
@@ -12,16 +14,19 @@ const Hero = () => {
   return (
     <Wrapper>
       <div className="hero-bg"></div>
-      <article>
-        <h1>SERVIS ZA REPARACIJU TURBINA</h1>
-        <h3>
-          Specijalizovani servis i reparacija turbina
-          svih vozila putničkog, autobuskog i teretnog programa
-        </h3>
-        <div>
-          <Button path="/contact">ZAKAŽITE SERVIS</Button>
-        </div>
-      </article>
+      <Zoom top cascade>
+        <article>
+          <h1>SERVIS ZA REPARACIJU TURBINA</h1>
+
+          <h3>
+            Specijalizovani servis i reparacija turbina svih vozila putničkog,
+            autobuskog i teretnog programa
+          </h3>
+          <div>
+            <Button path="/contact">ZAKAŽITE SERVIS</Button>
+          </div>
+        </article>
+      </Zoom>
 
       <video
         autoPlay

@@ -1,29 +1,37 @@
 import React from "react";
-
 import styled from "styled-components";
+import Wobble from "react-reveal/Wobble";
+import Fade from "react-reveal/Fade";
+
 
 const Advices = () => {
   return (
     <Wrapper className="section ">
       <div className="section-center advices-container">
-        <div className="advice-header">
-          <h2>VAŽNI SAVETI</h2>
-          <p>
-            Da li ste znali da je preporuka proizvođača automobila da se turbina
-            redovno servisira na pređenih 150.000 do 200.000km?
-          </p>
-        </div>
-        <div className="advice">
-          <h4>01</h4>
-          <p>
-            Redovno posećujte auto servis (redovna zamena filtera ulja i vazduha
-            je veoma važna)
-          </p>
-        </div>
-        <div className="advice">
-          <h4>02</h4>
-          <p>Koristite kvalitetna ulja i lubrikante za podmazivanje</p>
-        </div>
+        <Wobble>
+          <div className="advice-header">
+            <h2>VAŽNI SAVETI</h2>
+            <p>
+              Da li ste znali da je preporuka proizvođača automobila da se
+              turbina redovno servisira na pređenih 150.000 do 200.000km?
+            </p>
+          </div>
+        </Wobble>
+        <Fade top>
+          <div className="advice">
+            <h4>01</h4>
+            <p>
+              Redovno posećujte auto servis (redovna zamena filtera ulja i
+              vazduha je veoma važna)
+            </p>
+          </div>
+        </Fade>
+        <Fade bottom>
+          <div className="advice">
+            <h4>02</h4>
+            <p>Koristite kvalitetna ulja i lubrikante za podmazivanje</p>
+          </div>
+        </Fade>
       </div>
     </Wrapper>
   );

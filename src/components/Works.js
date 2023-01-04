@@ -2,6 +2,9 @@ import React from "react";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
+import Zoom from "react-reveal/Zoom";
+import Bounce from "react-reveal/Bounce";
 
 import Button from "./Button";
 
@@ -33,76 +36,104 @@ const Works = () => {
       {/*FOR MOBILE AND MIDLE SCREEN */}
       <Wrapper1>
         <div className="box-container ">
-          <div className="box image-container">
-            <StaticImage
-              src="../images/work10.jpg"
-              layout="constrained"
-              //placeholder="blurred"
-              className="img"
-              alt="Herro image"
-            ></StaticImage>
-            <div className="inner-img-title">
-              <h3>ŠTA JE TURBINA I ČEMU </h3>
-              <h3>SLUŽI?</h3>
+          <Slide left>
+            <div className="box image-container">
+              <StaticImage
+                src="../images/work10.jpg"
+                layout="constrained"
+                //placeholder="blurred"
+                className="img"
+                alt="Herro image"
+              ></StaticImage>
+
+              {/*FOR MOBILE CARD VIEW TWO H3 FOR TOP LINE */}
+              <Zoom top text>
+                <div className="inner-img-title">
+                  <h3>ŠTA JE TURBINA I ČEMU </h3>
+                  <h3>SLUŽI?</h3>
+                </div>
+              </Zoom>
             </div>
-          </div>
+          </Slide>
+
           <div className="box text-container">
-            <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
-            <p>
-              Osnovna uluga turbine je da u cilindre motora ubacuje više vazduha čime se
-              povećava efikasnost i snaga motora. Za optimalno funkcionisanje
-              turbine, neophodno je permanentno podmazivanje pokretnih
-              elemenata.
-            </p>
+            {/*FOR MIDLE SCREEN VIEW */}
+            <Slide right>
+              <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
+            </Slide>
+            <Zoom top cascade>
+              <p>
+                Osnovna uluga turbine je da u cilindre motora ubacuje više
+                vazduha čime se povećava efikasnost i snaga motora. Za optimalno
+                funkcionisanje turbine, neophodno je permanentno podmazivanje
+                pokretnih elemenata.
+              </p>
+            </Zoom>
             <Button path="/">VIŠE</Button>
           </div>
         </div>
         <div className="box-container reverse">
           <div className="box text-container">
-            <h3>NAJČEŠĆI RAZLOZI KVARA TURBINE</h3>
-            <ul>
-              <li>Nedostatak ulja i prekid podmazivanja</li>
-              <li>Neredovna zamena filtera ulja i vazduha</li>
-              <li>Nečistoća ulja i ulazak stranog tela</li>
-              <li>Broj pređenih kilometara</li>
-            </ul>
+            <Slide left>
+              <h3>NAJČEŠĆI RAZLOZI KVARA TURBINE</h3>
+            </Slide>
+            <Zoom top cascade>
+              <ul>
+                <li>Nedostatak ulja i prekid podmazivanja</li>
+                <li>Neredovna zamena filtera ulja i vazduha</li>
+                <li>Nečistoća ulja i ulazak stranog tela</li>
+                <li>Broj pređenih kilometara</li>
+              </ul>
+            </Zoom>
             <Button path="/">VIŠE</Button>
           </div>
-          <div className="box image-container">
-            <StaticImage
-              src="../images/work.jpg"
-              layout="constrained"
-              //placeholder="blurred"
-              className="img"
-              alt="Herro image"
-            ></StaticImage>
-            <div className="inner-img-title">
-              <h3>NAJČEŠĆI RAZLOZI KVARA </h3>
-              <h3>TURBINE</h3>
+          <Slide right>
+            <div className="box image-container">
+              <StaticImage
+                src="../images/work.jpg"
+                layout="constrained"
+                //placeholder="blurred"
+                className="img"
+                alt="Herro image"
+              ></StaticImage>
+              <Zoom top text>
+                <div className="inner-img-title">
+                  <h3>NAJČEŠĆI RAZLOZI KVARA </h3>
+                  <h3>TURBINE</h3>
+                </div>
+              </Zoom>
             </div>
-          </div>
+          </Slide>
         </div>
         <div className="box-container ">
-          <div className="box image-container">
-            <StaticImage
-              src="../images/work2.jpg"
-              layout="constrained"
-              //placeholder="blurred"
-              className="img"
-              alt="Herro image"
-            ></StaticImage>
-            <div className="inner-img-title">
-              <h3>SIMPTOMI KVARA TURBINE</h3>
+          <Slide left>
+            <div className="box image-container">
+              <StaticImage
+                src="../images/work2.jpg"
+                layout="constrained"
+                //placeholder="blurred"
+                className="img"
+                alt="Herro image"
+              ></StaticImage>
+              <Zoom top text>
+                <div className="inner-img-title">
+                  <h3>SIMPTOMI KVARA TURBINE</h3>
+                </div>
+              </Zoom>
             </div>
-          </div>
+          </Slide>
           <div className="box text-container">
-            <h3>SIMPTOMI KVARA TURBINE</h3>
-            <ul>
-              <li>Gubitak snage motora</li>
-              <li>Promena zvuka rada turbine</li>
-              <li>Pojačan dim iz auspuha</li>
-              <li>Pojačana potrošnja ulja</li>
-            </ul>
+            <Slide right>
+              <h3>SIMPTOMI KVARA TURBINE</h3>
+            </Slide>
+            <Zoom top cascade>
+              <ul>
+                <li>Gubitak snage motora</li>
+                <li>Promena zvuka rada turbine</li>
+                <li>Pojačan dim iz auspuha</li>
+                <li>Pojačana potrošnja ulja</li>
+              </ul>
+            </Zoom>
             <Button path="/">VIŠE</Button>
           </div>
         </div>
@@ -111,52 +142,67 @@ const Works = () => {
       <Wrapper2 className="section ">
         <div className="section-center projects-center">
           <article className="project">
-            <div className="project-img">
-              <GatsbyImage image={image1} className="img" alt="image" />
-            </div>
+            <Bounce left>
+              <div className="project-img">
+                <GatsbyImage image={image1} className="img" alt="image" />
+              </div>
+            </Bounce>
+            <Zoom top cascade>
+              <div className="project-info">
+                <div className="box text-container">
+                  <Zoom top cascade>
+                    <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
+                    <p>
+                      Osnovna uluga je da u cilindre motora ubacuje više vazduha
+                      čime se povećava efikasnost i snaga motora. Za optimalno
+                      funkcionisanje turbine, neophodno je permanentno
+                      podmazivanje pokretnih elemenata.
+                    </p>
+                  </Zoom>
+                  <Button path="/">VIŠE</Button>
+                </div>
+              </div>
+            </Zoom>
+          </article>
+          <article className="project">
+            <Bounce right>
+              <div className="project-img">
+                <GatsbyImage image={image2} className="img" alt="image" />
+              </div>
+            </Bounce>
             <div className="project-info">
               <div className="box text-container">
-                <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
-                <p>
-                  Osnovna uluga je da u cilindre motora ubacuje više vazduha
-                  čime se povećava efikasnost i snaga motora. Za optimalno
-                  funkcionisanje turbine, neophodno je permanentno podmazivanje
-                  pokretnih elemenata.
-                </p>
+                <Zoom top cascade>
+                  <h3>NAJČEŠĆI RAZLOZI KVARA TURBINE</h3>
+                  <ul>
+                    <li>Nedostatak ulja i prekid podmazivanja</li>
+                    <li>Neredovna zamena filtera ulja i vazduha</li>
+                    <li>Nečistoća ulja i ulazak stranog tela</li>
+                    <li>Broj pređenih kilometara</li>
+                  </ul>
+                </Zoom>
                 <Button path="/">VIŠE</Button>
               </div>
             </div>
           </article>
           <article className="project">
-            <div className="project-img">
-              <GatsbyImage image={image2} className="img" alt="image" />
-            </div>
-            <div className="project-info">
-              <div className="box text-container">
-                <h3>NAJČEŠĆI RAZLOZI KVARA TURBINE</h3>
-                <ul>
-                  <li>Nedostatak ulja i prekid podmazivanja</li>
-                  <li>Neredovna zamena filtera ulja i vazduha</li>
-                  <li>Nečistoća ulja i ulazak stranog tela</li>
-                  <li>Broj pređenih kilometara</li>
-                </ul>
-                <Button path="/">VIŠE</Button>
+            <Bounce left>
+              <div className="project-img">
+                <GatsbyImage image={image3} className="img" alt="image" />
               </div>
-            </div>
-          </article>
-          <article className="project">
-            <div className="project-img">
-              <GatsbyImage image={image3} className="img" alt="image" />
-            </div>
+            </Bounce>
             <div className="project-info">
               <div className="box text-container">
-                <h3>SIMPTOMI KVARA TURBINE</h3>
-                <ul>
-                  <li>Gubitak snage motora</li>
-                  <li>Promena zvuka rada turbine</li>
-                  <li>Pojačan dim iz auspuha</li>
-                  <li>Pojačana potrošnja ulja</li>
-                </ul>
+                <Zoom top cascade>
+                  <h3>SIMPTOMI KVARA TURBINE</h3>
+
+                  <ul>
+                    <li>Gubitak snage motora</li>
+                    <li>Promena zvuka rada turbine</li>
+                    <li>Pojačan dim iz auspuha</li>
+                    <li>Pojačana potrošnja ulja</li>
+                  </ul>
+                </Zoom>
                 <Button path="/">VIŠE</Button>
               </div>
             </div>
@@ -324,7 +370,7 @@ const Wrapper2 = styled.section`
       position: relative;
     }
     .text-container {
-      padding: 20px 25px 40px 25px;
+      padding: 20px 15px 40px 25px;
       ul {
         margin-bottom: 18px;
         li {

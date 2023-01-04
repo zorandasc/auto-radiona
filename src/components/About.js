@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import Roll from "react-reveal/Roll";
+import Zoom from "react-reveal/Zoom";
 
 import Title from "./Title";
 import Button from "./Button";
@@ -13,31 +15,33 @@ const About = () => {
           <div className="about-header">
             <Title title="o nama" />
           </div>
-
-          <p>
-            Turbo Tim Servis je grupa sa dugom tradicijom i velikim iskustvom u
-            auto industriji.
-          </p>
-          <p>
-            TURBO TIM SERVIS će uz pomoć znanja i iskustva stećenog dosadašnjim
-            radom u oblasti automehanike i veština stećenih u radu sa savremenih
-            mašinama se postarati da Vaš motor, zahvaljujući ispravnoj turbini,
-            postigne maksimalne performanse.
-          </p>
-
+          <Zoom bottom cascade>
+            <p>
+              Turbo Tim Servis je grupa sa dugom tradicijom i velikim iskustvom
+              u auto industriji.
+            </p>
+            <p>
+              TURBO TIM SERVIS će uz pomoć znanja i iskustva stećenog
+              dosadašnjim radom u oblasti automehanike i veština stećenih u radu
+              sa savremenih mašinama se postarati da Vaš motor, zahvaljujući
+              ispravnoj turbini, postigne maksimalne performanse.
+            </p>
+          </Zoom>
           <div className="about-btn-desktop">
             <Button path="/about">pročitaj više</Button>
           </div>
         </article>
-        <div className="about-img">
-          <StaticImage
-            src="../images/about-3.jpg"
-            layout="constrained"
-            //placeholder="blurred"
-            className="img"
-            alt="Herro image"
-          ></StaticImage>
-        </div>
+        <Roll right>
+          <div className="about-img">
+            <StaticImage
+              src="../images/about-3.jpg"
+              layout="constrained"
+              //placeholder="blurred"
+              className="img"
+              alt="Herro image"
+            ></StaticImage>
+          </div>
+        </Roll>
         <div className="about-btn-mobile">
           <Button path="/about">više o nama</Button>
         </div>

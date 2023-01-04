@@ -77,10 +77,9 @@ const Wrapper = styled.nav`
     top: 0;
     left: 0;
     width: 100vw;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(13, 13, 13, 0.8);
     z-index: -1;
     height: 5.5rem;
-    //border-bottom: 1px solid var(--clr-orange-1);
     box-shadow: var(--primary-dark-shadow);
   }
   .nav-center {

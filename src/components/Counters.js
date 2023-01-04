@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { HideOn } from "react-hide-on-scroll";
+
+const Counter = ({ limit, measure, text }) => {
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setNumber((n) => {
+        if (n >= limit) clearInterval(intervalId);
+        return n < limit ? n + 1 : n;
+      });
+    }, 100);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    <div className="about-counter">
+      <div className="counter-number">
+        <h1>{number}</h1>
+        <h1>{measure}</h1>
+      </div>
+      <div className="counter-text">
+        <p>{text}</p>
+      </div>
+    </div>
+  );
+};
 
 const Counters = () => {
+
   return (
-    <Wrapper >
+    <Wrapper>
       <div className="section-center about-counters">
         <div className="about-counter">
           <div className="counter-number">
@@ -32,7 +60,7 @@ const Counters = () => {
             <p>Vreme remonta 24 sata</p>
           </div>
         </div>
-        
+
         <div className="about-counter">
           <div className="counter-number">
             <h1>99</h1>

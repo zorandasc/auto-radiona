@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import Zoom from "react-reveal/Zoom";
 
 const Button = ({ path, children }) => {
-  return <Wrapper to={path}>{children}</Wrapper>;
+  return (
+    <Zoom>
+      <Wrapper to={path}>{children}</Wrapper>
+    </Zoom>
+  );
 };
 
 const Wrapper = styled(Link)`
