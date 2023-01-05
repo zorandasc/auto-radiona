@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
-const Hamburger = ({ onClick }) => {
+import { GatsbyContext } from "../context/context";
+
+const Hamburger = () => {
+  const { isSidebarOpen, toggleSidebar } = useContext(GatsbyContext);
   return (
-    <Wrapper>
+    <Wrapper isSidebarOpen={isSidebarOpen}>
       <input
         type="checkbox"
         id="nav-toggle"
         className="nav-toggle"
-        onClick={onClick}
+        onClick={toggleSidebar}
       />
       <label htmlFor="nav-toggle" className="nav-toggle-label">
         <span></span>
@@ -68,14 +71,24 @@ const Wrapper = styled.div`
   }
 
   /*PROMJENA HAMBURGERA U X*/
-  .nav-toggle:checked ~ label span {
-    background: transparent;
+  //kevo nav je to radio preko checked atributa
+  //.nav-toggle:checked ~ label span{}
+  //.nav-toggle:checked ~ label > span::before {}
+  //.nav-toggle:checked ~ label > span::after {}
+  .nav-toggle ~ label span {
+    background: ${(props) => (props.isSidebarOpen ? "transparent" : "")};
   }
-  .nav-toggle:checked ~ label > span::before {
-    transform: rotate(-45deg) translate(-6px, 5px);
+  .nav-toggle ~ label > span::before {
+    transform: ${(props) =>
+      props.isSidebarOpen
+        ? "rotate(-45deg) translate(-6px, 5px)"
+        : "rotate(0) translateX(0)"};
   }
-  .nav-toggle:checked ~ label > span::after {
-    transform: rotate(45deg) translate(-6px, -5px);
+  .nav-toggle ~ label > span::after {
+    transform: ${(props) =>
+      props.isSidebarOpen
+        ? "rotate(45deg) translate(-6px, -5px)"
+        : "rotate(0) translateX(0)"};
   }
 
   @media screen and (min-width: 1224px) {

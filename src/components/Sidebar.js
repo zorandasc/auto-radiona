@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-//import { FaTimes } from "react-icons/fa";
 import { Link } from "gatsby";
 
 import logo from "../images/logo-orange.svg";
@@ -9,40 +8,35 @@ import links from "../constants/links";
 import socialLinks from "../constants/social_links";
 
 const Sidebar = () => {
-  const { isSidebarOpen, hideSidebar } = useContext(GatsbyContext);
+  const { isSidebarOpen, toggleSidebar } = useContext(GatsbyContext);
   return (
     <Wrapper isSidebarOpen={isSidebarOpen}>
       <div className="sidebar-header">
-        <Link to="/" className="logo-container">
+        <Link to="/" onClick={toggleSidebar} className="logo-container">
           <img src={logo} alt="web dev" className="logo" />
         </Link>
-        {/* 
-        <button className="close-btn" type="button" onClick={hideSidebar}>
-          <FaTimes />
-        </button>
-      */}
       </div>
-      <div className="sidebar-content">
-        <ul className="sidebar-links">
-          <li>
-            <Link to="/" onClick={hideSidebar} activeClassName="active">
-              Početna
-            </Link>
-          </li>
-          {links.map((link) => {
-            return (
-              <li key={link.id}>
-                <Link
-                  to={link.url}
-                  onClick={hideSidebar}
-                  activeClassName="active"
-                >
-                  {link.text}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <div className="sidebar-content"> 
+          <ul className="sidebar-links">
+            <li>
+              <Link to="/" onClick={toggleSidebar} activeClassName="active">
+                Početna
+              </Link>
+            </li>
+            {links.map((link) => {
+              return (
+                <li key={link.id}>
+                  <Link
+                    to={link.url}
+                    onClick={toggleSidebar}
+                    activeClassName="active"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         <span className="tel-number">(+381) 656 838 126</span>
         <ul className="social-links">
           {socialLinks.map((link) => {

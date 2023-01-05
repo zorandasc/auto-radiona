@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 //import { FaAlignRight } from "react-icons/fa";
@@ -7,13 +7,12 @@ import { HideOn } from "react-hide-on-scroll";
 import Slide from "react-reveal/Slide";
 
 import logo from "../images/logo-orange.svg";
-import { GatsbyContext } from "../context/context";
 import links from "../constants/links";
 import socialLinks from "../constants/social_links";
 import Hamburger from "./Hamburger";
 
 const Navbar = () => {
-  const { toggleSidebar } = useContext(GatsbyContext);
+  
   return (
     <Wrapper>
       {/*Shown navbar bcg on offset while scrolling for different device px*/}
@@ -37,7 +36,7 @@ const Navbar = () => {
             <FaAlignRight />
           </button>
           */}
-          <Hamburger onClick={toggleSidebar}></Hamburger>
+          <Hamburger></Hamburger>
         </div>
         <div className="nav-links">
           {links.map((link) => {
