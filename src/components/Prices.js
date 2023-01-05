@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { FaCheck } from "react-icons/fa";
+//import { FaCheck } from "react-icons/fa";
 
-import Button from "./Button";
+//import Button from "./Button";
 
 const Prices = () => {
   return (
@@ -31,6 +31,7 @@ const Prices = () => {
   );
 };
 
+/*
 const PriceCard = ({ price, title, shadow }) => {
   return (
     <CardWrapper shadow={shadow}>
@@ -125,6 +126,7 @@ const CardWrapper = styled.div`
     }
   }
 `;
+*/
 
 const Wrapper = styled.section`
   background-color: var(--clr-black-3);

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { graphql, Link } from "gatsby";
-import { StaticImage, getImage } from "gatsby-plugin-image";
+import { StaticImage, /*getImage*/ } from "gatsby-plugin-image";
 import BackgroundImage from "gatsby-background-image";
 import Bounce from "react-reveal/Bounce";
 
-import { Layout, Title, TeamCard, Button, Seo } from "../components";
+import { Layout, Title, /*TeamCard,*/ Button, Seo } from "../components";
 
 /*
 const tags = [
@@ -22,11 +22,12 @@ const about = ({ data }) => {
   // Set ImageData.
   const imageData1 = data.desktop1.childImageSharp.fluid;
   const imageData2 = data.desktop2.childImageSharp.fluid;
-  const image1 = getImage(data.image1);
-  const image2 = getImage(data.image2);
-  const image3 = getImage(data.image3);
-  const image4 = getImage(data.image4);
+  //const image1 = getImage(data.image1);
+  //const image2 = getImage(data.image2);
+  //const image3 = getImage(data.image3);
+  //const image4 = getImage(data.image4);
 
+  /*
   const members = [
     { id: 1, name: "Alonzo Morning", job: "Ingener", image: image1 },
     { id: 2, name: "Michel Sumaher", job: "Mehanic", image: image2 },
@@ -35,7 +36,7 @@ const about = ({ data }) => {
     { id: 5, name: "Rubi Fernandez", job: "Tehnical Staff", image: image3 },
     { id: 6, name: "Toni Burton", job: "Painter", image: image1 },
   ];
-
+*/
   return (
     <Layout>
       <Wrapper>

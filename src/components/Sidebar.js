@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Bounce from "react-reveal/Bounce";
+import Zoom from "react-reveal/Zoom";
 
 import logo from "../images/logo-orange.svg";
 import { GatsbyContext } from "../context/context";
@@ -16,44 +18,57 @@ const Sidebar = () => {
           <img src={logo} alt="web dev" className="logo" />
         </Link>
       </div>
-      <div className="sidebar-content"> 
-          <ul className="sidebar-links">
-            <li>
-              <Link to="/" onClick={toggleSidebar} activeClassName="active">
-                Početna
-              </Link>
-            </li>
-            {links.map((link) => {
-              return (
-                <li key={link.id}>
-                  <Link
-                    to={link.url}
-                    onClick={toggleSidebar}
-                    activeClassName="active"
-                  >
-                    {link.text}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        <span className="tel-number">(+381) 656 838 126</span>
-        <ul className="social-links">
-          {socialLinks.map((link) => {
-            return (
-              <li key={link.id}>
-                <a
-                  href={link.url}
-                  className="social-link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {link.icon}
-                </a>
+      <div className="sidebar-content">
+        {isSidebarOpen && (
+          <Bounce bottom cascade>
+            <ul className="sidebar-links">
+              <li>
+                <Link to="/" onClick={toggleSidebar} activeClassName="active">
+                  Početna
+                </Link>
               </li>
-            );
-          })}
-        </ul>
+              {links.map((link) => {
+                return (
+                  <li key={link.id}>
+                    <Link
+                      to={link.url}
+                      onClick={toggleSidebar}
+                      activeClassName="active"
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </Bounce>
+        )}
+        {isSidebarOpen && (
+          <Zoom bottom cascade>
+            <span className="tel-number">(+381) 656 838 126</span>
+          </Zoom>
+        )}
+
+        {isSidebarOpen && (
+          <Zoom bottom cascade>
+            <ul className="social-links">
+              {socialLinks.map((link) => {
+                return (
+                  <li key={link.id}>
+                    <a
+                      href={link.url}
+                      className="social-link"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {link.icon}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Zoom>
+        )}
       </div>
     </Wrapper>
   );

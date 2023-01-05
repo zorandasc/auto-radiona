@@ -1,32 +1,43 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Zoom from "react-reveal/Zoom";
+import VisibilitySensor from "react-visibility-sensor";
 
 const Counter = ({ limit, measure, text, interval }) => {
   const [number, setNumber] = useState(0);
+  const [counterVisible, setCounterVisible] = useState(false);
+
+  function onChange(isVisible) {
+    //startuj counter at visibility, but only one time
+    isVisible ? setCounterVisible(true) : setCounterVisible(counterVisible);
+  }
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setNumber((n) => {
-        if (n >= limit) clearInterval(intervalId);
-        return n < limit ? n + 1 : n;
-      });
-    }, interval);
+    const intervalId =
+      counterVisible &&
+      setInterval(() => {
+        setNumber((n) => {
+          if (n >= limit) clearInterval(intervalId);
+          return n < limit ? n + 1 : n;
+        });
+      }, interval);
     return () => clearInterval(intervalId);
-  }, [limit, interval]);
+  }, [limit, interval, counterVisible]);
 
   return (
-    <Zoom>
-      <div className="about-counter">
-        <div className="counter-number">
-          <h1>{number}</h1>
-          <h1>{measure}</h1>
+    <VisibilitySensor onChange={onChange}>
+      <Zoom>
+        <div className="about-counter">
+          <div className="counter-number">
+            <h1>{number}</h1>
+            <h1>{measure}</h1>
+          </div>
+          <div className="counter-text">
+            <p>{text}</p>
+          </div>
         </div>
-        <div className="counter-text">
-          <p>{text}</p>
-        </div>
-      </div>
-    </Zoom>
+      </Zoom>
+    </VisibilitySensor>
   );
 };
 
