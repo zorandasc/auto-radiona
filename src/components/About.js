@@ -15,7 +15,7 @@ const About = () => {
           <div className="about-header">
             <Title title="o nama" />
           </div>
-          <Zoom bottom cascade>
+          <Zoom bottom>
             <p>
               Turbo Tim Servis je grupa sa dugom tradicijom i velikim iskustvom
               u auto industriji.

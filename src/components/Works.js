@@ -61,7 +61,7 @@ const Works = () => {
             <Slide right>
               <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
             </Slide>
-            <Zoom top cascade>
+            <Zoom bottom>
               <p>
                 Osnovna uluga turbine je da u cilindre motora ubacuje više
                 vazduha čime se povećava efikasnost i snaga motora. Za optimalno

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { graphql, Link } from "gatsby";
 import { StaticImage, getImage } from "gatsby-plugin-image";
 import BackgroundImage from "gatsby-background-image";
+import Bounce from "react-reveal/Bounce";
 
 import { Layout, Title, TeamCard, Button, Seo } from "../components";
 
@@ -58,16 +59,17 @@ const about = ({ data }) => {
         </BackgroundImage>
 
         <div className="section-center about-center">
-          <div className="about-img">
-            <StaticImage
-              src="../images/about-3.jpg"
-              layout="constrained"
-              //placeholder="blurred"
-              className="img"
-              alt="Herro image"
-            ></StaticImage>
-          </div>
-
+          <Bounce left>
+            <div className="about-img">
+              <StaticImage
+                src="../images/about-3.jpg"
+                layout="constrained"
+                //placeholder="blurred"
+                className="img"
+                alt="Herro image"
+              ></StaticImage>
+            </div>
+          </Bounce>
           <article className="about-text">
             <Title title="MI ČINIMO POPRAVKU AUTA UGODNIM" />
             <p>
@@ -96,6 +98,7 @@ const about = ({ data }) => {
             */}
           </article>
         </div>
+        {/* 
         <div className="section-center team">
           <div className="section-title">
             <h3>ČLANOVI EKSPERTSKOG TIMA </h3>
@@ -111,6 +114,7 @@ const about = ({ data }) => {
             ))}
           </div>
         </div>
+        */}
         <BackgroundImage
           Tag="section"
           fluid={imageData2}

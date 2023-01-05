@@ -9,6 +9,7 @@ const Prices = () => {
     <Wrapper className="section">
       <div className="section-center prices-center">
         <div className="prices-info">
+          {/* 
           <h2>PRISTUPAČNI CIJENOVNI PLANOVI</h2>
           <p>
             Mi pružamo najbolji servis automobila i preporučujemo najbolje
@@ -19,9 +20,12 @@ const Prices = () => {
             <li>VREME REMONTA 24h</li>
             <li>ON-LINE ZAKAZIVANJE</li>
           </ul>
+          */}
         </div>
+        {/* 
         <PriceCard price="59.99" title="PERSONALNI" shadow></PriceCard>
         <PriceCard price="99.99" title="PROFESIONALNI"></PriceCard>
+        */}
       </div>
     </Wrapper>
   );

@@ -5,6 +5,8 @@ import { graphql, Link } from "gatsby";
 import { TfiEmail } from "react-icons/tfi";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BsFillHouseDoorFill, BsFillClockFill } from "react-icons/bs";
+import Slide from "react-reveal/Slide";
+import Zoom from "react-reveal/Zoom";
 
 import { Layout, Seo } from "../components";
 
@@ -32,107 +34,118 @@ const contact = ({ data }) => {
           </div>
         </BackgroundImage>
         <div className="section-center address-center">
-          <div className="address">
-            <h4>
-              RADNO VREME <BsFillClockFill className="icon"></BsFillClockFill>
-            </h4>
-            <div className="time">
-              <span>Ponedeljak - Četvrtak</span>
-              <span>8 am - 8 pm</span>
-            </div>
-            <div className="time">
-              <span>Petak</span>
-              <span>8 am - 6 pm</span>
-            </div>
-            <div className="time">
-              <span>Subota</span>
-              <span>9 am - 4 pm</span>
-            </div>
-            <div className="time">
-              <span>Nedelja</span>
-              <span>Zatvoreno</span>
-            </div>
-          </div>
-          <div className="address">
-            <h4>KORISNIČKA PODRŠKA</h4>
-            <div className="tel-email">
-              <AiOutlinePhone className="icon"></AiOutlinePhone>(+381) 656 838
-              126
-            </div>
-            <div className="tel-email">
-              <TfiEmail className="icon"></TfiEmail>turbotimservis@gmail.com
-            </div>
-          </div>
-          <div className="address">
-            <h4>
-              ADRESA{" "}
-              <BsFillHouseDoorFill className="icon"></BsFillHouseDoorFill>
-            </h4>
-            <div className="street">
-              <span>6 April bb, Prijepolje, Srbija</span>
-            </div>
-            <div>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <div className="section-center map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6162718128353!2d19.667622114392778!3d43.38504697774884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757f8f0cf7fb1e5%3A0x2480c811ef3e7ab!2s6.%20aprila%2C%20Prijepolje%2C%20Serbia!5e0!3m2!1sen!2sba!4v1672685192795!5m2!1sen!2sba"
-            width="100%"
-            height="400"
-            style={{ border: "0", overflow: "hidden", margin: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="google map address"
-          ></iframe>
-        </div>
-        <div className="section-center form-container">
-          <h2>ZAKAŽITE ONLINE PREGLED</h2>
-          <p>
-            Nakon što prosledite obrazac, predstavnik će vas ponovo kontaktirati
-            sa informacijama koje će vam biti potrebne da zakažete sastanak.
-          </p>
-          <form className="form-group">
-            <div className="credencial-container">
-              <div>
-                <label htmlFor="name">VAŠE IME</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Unesite ime"
-                  className="form-control"
-                />
+          <Slide left>
+            <div className="address">
+              <h4>KORISNIČKA PODRŠKA</h4>
+              <div className="tel-email">
+                <AiOutlinePhone className="icon"></AiOutlinePhone>(+381) 656 838
+                126
               </div>
-              <div>
-                <label htmlFor="email">VAŠ EMAIL</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Unesite Vaš email"
-                  className="form-control"
-                />
+              <div className="tel-email">
+                <TfiEmail className="icon"></TfiEmail>turbotimservis@gmail.com
               </div>
             </div>
-            <div className="message-container">
-              <div>
-                <label htmlFor="message">VAŠA PORUKA</label>
-                <textarea
-                  name="message"
-                  rows="5"
-                  placeholder="Opišite Vaš problem"
-                  className="form-control"
-                ></textarea>
+          </Slide>
+          <Zoom>
+            <div className="address">
+              <h4>
+                RADNO VREME <BsFillClockFill className="icon"></BsFillClockFill>
+              </h4>
+              <div className="time">
+                <span>Ponedeljak - Četvrtak</span>
+                <span>8 am - 8 pm</span>
+              </div>
+              <div className="time">
+                <span>Petak</span>
+                <span>8 am - 6 pm</span>
+              </div>
+              <div className="time">
+                <span>Subota</span>
+                <span>9 am - 4 pm</span>
+              </div>
+              <div className="time">
+                <span>Nedelja</span>
+                <span>Zatvoreno</span>
               </div>
             </div>
-            <div className="btn-container">
-              <button type="submit" className="submit-btn">
-                pošalji
-              </button>
+          </Zoom>
+          <Slide right>
+            <div className="address">
+              <h4>
+                ADRESA
+                <BsFillHouseDoorFill className="icon"></BsFillHouseDoorFill>
+              </h4>
+              <div className="street">
+                <span>6 April bb, Prijepolje, Srbija</span>
+              </div>
+              <div>
+                <span></span>
+              </div>
             </div>
-          </form>
+          </Slide>
         </div>
+        <Zoom>
+          <div className="section-center map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6162718128353!2d19.667622114392778!3d43.38504697774884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757f8f0cf7fb1e5%3A0x2480c811ef3e7ab!2s6.%20aprila%2C%20Prijepolje%2C%20Serbia!5e0!3m2!1sen!2sba!4v1672685192795!5m2!1sen!2sba"
+              width="100%"
+              height="400"
+              style={{ border: "0", overflow: "hidden", margin: "0" }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="google map address"
+            ></iframe>
+          </div>
+        </Zoom>
+        <Slide bottom>
+          <div className="section-center form-container">
+            <h2>ZAKAŽITE ONLINE PREGLED</h2>
+            <p>
+              Nakon što prosledite obrazac, predstavnik će vas ponovo
+              kontaktirati sa informacijama koje će vam biti potrebne da
+              zakažete sastanak.
+            </p>
+            <form className="form-group">
+              <div className="credencial-container">
+                <div>
+                  <label htmlFor="name">VAŠE IME</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Unesite ime"
+                    className="form-control"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email">VAŠ EMAIL</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Unesite Vaš email"
+                    className="form-control"
+                  />
+                </div>
+              </div>
+              <div className="message-container">
+                <div>
+                  <label htmlFor="message">VAŠA PORUKA</label>
+                  <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Opišite Vaš problem"
+                    className="form-control"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="btn-container">
+                <button type="submit" className="submit-btn">
+                  pošalji
+                </button>
+              </div>
+            </form>
+          </div>
+        </Slide>
       </Wrapper>
     </Layout>
   );

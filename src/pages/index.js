@@ -19,6 +19,7 @@ const IndexPage = () => {
       <About></About>
       <Works></Works>
       <Advices></Advices>
+    
       <Prices></Prices>
     </Layout>
   );

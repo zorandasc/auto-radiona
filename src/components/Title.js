@@ -4,7 +4,7 @@ import Bounce from "react-reveal/Bounce";
 
 const Title = ({ title }) => {
   return (
-    <Bounce top cascade>
+    <Bounce bottom cascade>
       <Wrapper>
         <h2>{title || "default title"}</h2>
         <div className="underline"></div>

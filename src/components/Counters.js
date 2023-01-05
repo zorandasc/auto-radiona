@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { HideOn } from "react-hide-on-scroll";
+import Zoom from "react-reveal/Zoom";
 
-const Counter = ({ limit, measure, text }) => {
+const Counter = ({ limit, measure, text, interval }) => {
   const [number, setNumber] = useState(0);
 
   useEffect(() => {
@@ -11,65 +11,53 @@ const Counter = ({ limit, measure, text }) => {
         if (n >= limit) clearInterval(intervalId);
         return n < limit ? n + 1 : n;
       });
-    }, 100);
+    }, interval);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [limit, interval]);
 
   return (
-    <div className="about-counter">
-      <div className="counter-number">
-        <h1>{number}</h1>
-        <h1>{measure}</h1>
+    <Zoom>
+      <div className="about-counter">
+        <div className="counter-number">
+          <h1>{number}</h1>
+          <h1>{measure}</h1>
+        </div>
+        <div className="counter-text">
+          <p>{text}</p>
+        </div>
       </div>
-      <div className="counter-text">
-        <p>{text}</p>
-      </div>
-    </div>
+    </Zoom>
   );
 };
 
 const Counters = () => {
-
   return (
     <Wrapper>
       <div className="section-center about-counters">
-        <div className="about-counter">
-          <div className="counter-number">
-            <h1>15</h1>
-            <h1>+</h1>
-          </div>
-          <div className="counter-text">
-            <p>Više od 15 godina rada na polju auto popravki i održavanja</p>
-          </div>
-        </div>
-        <div className="about-counter">
-          <div className="counter-number">
-            <h1>12</h1>
-            <h1>M</h1>
-          </div>
-          <div className="counter-text">
-            <p>Garanacija na servis 12 meseci</p>
-          </div>
-        </div>
-        <div className="about-counter">
-          <div className="counter-number">
-            <h1>24</h1>
-            <h1>h</h1>
-          </div>
-          <div className="counter-text">
-            <p>Vreme remonta 24 sata</p>
-          </div>
-        </div>
-
-        <div className="about-counter">
-          <div className="counter-number">
-            <h1>99</h1>
-            <h1>%</h1>
-          </div>
-          <div className="counter-text">
-            <p>Zadovoljnih korisnika</p>
-          </div>
-        </div>
+        <Counter
+          limit={15}
+          measure="+"
+          text="Više od 15 godina rada na polju auto popravki i održavanja"
+          interval={100}
+        ></Counter>
+        <Counter
+          limit={12}
+          measure="M"
+          text="Garanacija na servis 12 meseci"
+          interval={100}
+        ></Counter>
+        <Counter
+          limit={24}
+          measure="h"
+          text="Vreme remonta 24 sata"
+          interval={90}
+        ></Counter>
+        <Counter
+          limit={99}
+          measure="%"
+          text="Zadovoljnih korisnika"
+          interval={20}
+        ></Counter>
       </div>
     </Wrapper>
   );
