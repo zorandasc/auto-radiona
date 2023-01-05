@@ -106,13 +106,23 @@ const contact = ({ data }) => {
               kontaktirati sa informacijama koje će vam biti potrebne da
               zakažete sastanak.
             </p>
-            <form className="form-group">
+            <form
+              name="contact"
+              className="form-group"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
               <div className="credencial-container">
                 <div>
                   <label htmlFor="name">VAŠE IME</label>
                   <input
                     type="text"
                     name="name"
+                    id="name"
+                    required
                     placeholder="Unesite ime"
                     className="form-control"
                   />
@@ -122,6 +132,8 @@ const contact = ({ data }) => {
                   <input
                     type="email"
                     name="email"
+                    id="email"
+                    required
                     placeholder="Unesite Vaš email"
                     className="form-control"
                   />
@@ -132,6 +144,8 @@ const contact = ({ data }) => {
                   <label htmlFor="message">VAŠA PORUKA</label>
                   <textarea
                     name="message"
+                    id="message"
+                    required
                     rows="5"
                     placeholder="Opišite Vaš problem"
                     className="form-control"
@@ -351,11 +365,17 @@ const Wrapper = styled.section`
           padding: 0 !important;
           font-size: 14px;
           color: #c2c2c2;
-          height: 39px;
+
           border-bottom: 2px solid #343434;
         }
       }
     }
+    .credencial-container {
+      .form-control {
+        height: 39px;
+      }
+    }
+    
     .btn-container {
       padding-top: 50px;
     }
