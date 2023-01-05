@@ -150,10 +150,10 @@ const Works = () => {
             <Zoom top cascade>
               <div className="project-info">
                 <div className="box text-container">
-                  <Zoom top cascade>
+                  <Zoom top>
                     <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
                     <p>
-                      Osnovna uluga je da u cilindre motora ubacuje više vazduha
+                      Osnovna uluga turbine je da u cilindre motora ubacuje više vazduha
                       čime se povećava efikasnost i snaga motora. Za optimalno
                       funkcionisanje turbine, neophodno je permanentno
                       podmazivanje pokretnih elemenata.

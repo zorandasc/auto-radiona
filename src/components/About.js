@@ -23,7 +23,7 @@ const About = () => {
             <p>
               TURBO TIM SERVIS će uz pomoć znanja i iskustva stećenog
               dosadašnjim radom u oblasti automehanike i veština stećenih u radu
-              sa savremenih mašinama se postarati da Vaš motor, zahvaljujući
+              sa savremenim mašinama se postarati da Vaš motor, zahvaljujući
               ispravnoj turbini, postigne maksimalne performanse.
             </p>
           </Zoom>
