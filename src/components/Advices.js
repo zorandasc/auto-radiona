@@ -19,7 +19,7 @@ const Advices = () => {
         </Wobble>
         <Fade top>
           <div className="advice">
-            <h4>01</h4>
+            <span>01</span>
             <p>
               Redovno posećujte auto servis (redovna zamena filtera ulja i
               vazduha je veoma važna)
@@ -28,7 +28,7 @@ const Advices = () => {
         </Fade>
         <Fade bottom>
           <div className="advice">
-            <h4>02</h4>
+            <span>02</span>
             <p>Koristite kvalitetna ulja i lubrikante za podmazivanje</p>
           </div>
         </Fade>
@@ -51,7 +51,8 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    h4 {
+    span {
+      font-weight: bold;
       font-size: 2rem;
       color: var(--clr-orange-1);
     }

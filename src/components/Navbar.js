@@ -24,18 +24,16 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/" className="logo-container">
-            <img src={logo} alt="web dev" className="logo" />
-            {/* 
-            <GiAutoRepair className="logo"></GiAutoRepair>
-            <span className="white">TURBO</span>
-            <span>TIM SERVIS</span>
-          */}
+            <img
+              src={logo}
+              alt="web dev"
+              className="logo"
+              width="205"
+              height="60"
+            />
+            
           </Link>
-          {/* 
-          <button type="button" className="toggle-btn" onClick={showSidebar}>
-            <FaAlignRight />
-          </button>
-          */}
+          
           <Hamburger></Hamburger>
         </div>
         <div className="nav-links">
@@ -51,7 +49,14 @@ const Navbar = () => {
         <div className="social-links">
           {socialLinks.map((link) => {
             return (
-              <a href={link.url} key={link.id} className="social-link">
+              <a
+                href={link.url}
+                key={link.id}
+                className="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="socials links"
+              >
                 {link.icon}
               </a>
             );
@@ -109,17 +114,7 @@ const Wrapper = styled.nav`
         color: var(--mainWhite);
       }
     }
-    .toggle-btn {
-      font-size: 2rem;
-      background: transparent;
-      border-color: transparent;
-      color: var(--mainWhite);
-      cursor: pointer;
-      transition: var(--transition);
-      &:hover {
-        color: var(--clr-orange-1);
-      }
-    }
+  
   }
 
   .nav-links,
@@ -130,9 +125,7 @@ const Wrapper = styled.nav`
   //DESKTOP VIEW
 
   @media screen and (min-width: 1224px) {
-    .toggle-btn {
-      display: none;
-    }
+    
     .nav-links {
       display: flex;
       justify-content: flex-end;

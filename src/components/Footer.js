@@ -17,12 +17,13 @@ const Footer = () => {
         <div className="cell">
           <div className="title">
             <Link to="/" className="logo-container">
-              <img src={logo} alt="web dev" className="logo" />
-              {/* 
-            <GiAutoRepair className="logo"></GiAutoRepair>
-            <span className="white">TURBO</span>
-            <span>TIM SERVIS</span>
-          */}
+              <img
+                src={logo}
+                alt="web dev"
+                className="logo"
+                width="205"
+                height="60"
+              />
             </Link>
           </div>
           <div className="content">
@@ -74,6 +75,7 @@ const Footer = () => {
               className="social-link"
               target="_blank"
               rel="noreferrer"
+              aria-label="socials links"
             >
               {link.icon}
             </a>
@@ -196,6 +198,7 @@ const Wrapper = styled.footer`
       justify-content: flex-start;
       text-align: center;
       .logo {
+        width: auto;
         font-size: 3rem;
         color: var(--clr-orange-1);
         cursor: pointer;

@@ -15,7 +15,13 @@ const Sidebar = () => {
     <Wrapper isSidebarOpen={isSidebarOpen}>
       <div className="sidebar-header">
         <Link to="/" onClick={toggleSidebar} className="logo-container">
-          <img src={logo} alt="web dev" className="logo" />
+          <img
+            src={logo}
+            alt="web dev"
+            className="logo"
+            width="205"
+            height="60"
+          />
         </Link>
       </div>
       <div className="sidebar-content">
@@ -60,6 +66,7 @@ const Sidebar = () => {
                       className="social-link"
                       target="_blank"
                       rel="noreferrer"
+                      aria-label="socials links"
                     >
                       {link.icon}
                     </a>
@@ -186,7 +193,7 @@ const Wrapper = styled.aside`
       border: 2px solid var(--clr-orange-1);
     }
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1224px) {
     transform: translateX(-100%);
   }
 `;
