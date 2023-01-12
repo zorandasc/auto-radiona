@@ -1,7 +1,7 @@
 const links = [
   {
     id: 1,
-    text: "Onama",
+    text: "O nama",
     url: "/about",
   },
   /*

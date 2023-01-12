@@ -375,7 +375,7 @@ const Wrapper = styled.section`
         height: 39px;
       }
     }
-    
+
     .btn-container {
       padding-top: 50px;
     }
@@ -444,10 +444,13 @@ const Wrapper = styled.section`
     }
   }
   .map {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (min-width: 676px) {
+      padding-bottom: 100px;
+    }
   }
 `;
 

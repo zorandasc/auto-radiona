@@ -11,17 +11,17 @@ import Button from "./Button";
 const Works = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(name: { eq: "work10" }) {
+      image1: file(name: { eq: "turbina1" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
-      image2: file(name: { eq: "work" }) {
+      image2: file(name: { eq: "turbina2" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
-      image3: file(name: { eq: "work2" }) {
+      image3: file(name: { eq: "turbina3" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
@@ -34,15 +34,16 @@ const Works = () => {
   return (
     <>
       {/*FOR MOBILE AND MIDLE SCREEN */}
-      <Wrapper1>
+      <MobbileWrapper>
         <div className="box-container ">
           <Slide left>
             <div className="box image-container">
               <StaticImage
-                src="../images/work10.jpg"
+                src="../images/turbina1.jpg"
                 layout="constrained"
                 //placeholder="blurred"
                 className="img"
+                imgClassName="imgClassName"
                 alt="Herro image"
               ></StaticImage>
 
@@ -90,10 +91,11 @@ const Works = () => {
           <Slide right>
             <div className="box image-container">
               <StaticImage
-                src="../images/work.jpg"
+                src="../images/turbina2.jpg"
                 layout="constrained"
                 //placeholder="blurred"
                 className="img"
+                imgClassName="imgClassName"
                 alt="Herro image"
               ></StaticImage>
               <Zoom top text>
@@ -109,10 +111,11 @@ const Works = () => {
           <Slide left>
             <div className="box image-container">
               <StaticImage
-                src="../images/work2.jpg"
+                src="../images/turbina3.jpg"
                 layout="constrained"
                 //placeholder="blurred"
                 className="img"
+                imgClassName="imgClassName"
                 alt="Herro image"
               ></StaticImage>
               <Zoom top text>
@@ -137,9 +140,9 @@ const Works = () => {
             <Button path="/">VIŠE</Button>
           </div>
         </div>
-      </Wrapper1>
+      </MobbileWrapper>
       {/*FOR WIDE SCREEN */}
-      <Wrapper2 className="section ">
+      <DesktopWrapper className="section ">
         <div className="section-center projects-center">
           <article className="project">
             <Bounce left>
@@ -147,22 +150,20 @@ const Works = () => {
                 <GatsbyImage image={image1} className="img" alt="image" />
               </div>
             </Bounce>
-            <Zoom top cascade>
-              <div className="project-info">
-                <div className="box text-container">
-                  <Zoom top>
-                    <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
-                    <p>
-                      Osnovna uluga turbine je da u cilindre motora ubacuje više vazduha
-                      čime se povećava efikasnost i snaga motora. Za optimalno
-                      funkcionisanje turbine, neophodno je permanentno
-                      podmazivanje pokretnih elemenata.
-                    </p>
-                  </Zoom>
-                  <Button path="/">VIŠE</Button>
-                </div>
+            <div className="project-info">
+              <div className="box text-container">
+                <Zoom top>
+                  <h3>ŠTA JE TURBINA I ČEMU SLUŽI?</h3>
+                  <p>
+                    Osnovna uluga turbine je da u cilindre motora ubacuje više
+                    vazduha čime se povećava efikasnost i snaga motora. Za
+                    optimalno funkcionisanje turbine, neophodno je permanentno
+                    podmazivanje pokretnih elemenata.
+                  </p>
+                </Zoom>
+                <Button path="/">VIŠE</Button>
               </div>
-            </Zoom>
+            </div>
           </article>
           <article className="project">
             <Bounce right>
@@ -208,12 +209,12 @@ const Works = () => {
             </div>
           </article>
         </div>
-      </Wrapper2>
+      </DesktopWrapper>
     </>
   );
 };
 
-const Wrapper1 = styled.section`
+const MobbileWrapper = styled.section`
   background-color: var(--clr-black-3);
   color: var(--mainWhite);
   width: 100%;
@@ -249,6 +250,10 @@ const Wrapper1 = styled.section`
         transform: scale(1.45) rotate(-1.5deg);
       }
     }
+    .imgClassName {
+      filter: brightness(60%);
+    }
+
     .inner-img-title {
       position: absolute;
       left: 20px;
@@ -262,7 +267,7 @@ const Wrapper1 = styled.section`
       left: 0;
       top: 0;
       width: 100%;
-      border-top: 3px solid #555;
+      border-top: 1px solid #555;
     }
   }
   .text-container {
@@ -324,7 +329,7 @@ const Wrapper1 = styled.section`
   }
 `;
 
-const Wrapper2 = styled.section`
+const DesktopWrapper = styled.section`
   display: none;
   background: var(--clr-black-3);
   .project {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { graphql, Link } from "gatsby";
-import { StaticImage, /*getImage*/ } from "gatsby-plugin-image";
+import { StaticImage /*getImage*/ } from "gatsby-plugin-image";
 import BackgroundImage from "gatsby-background-image";
 import Bounce from "react-reveal/Bounce";
 
@@ -149,7 +149,7 @@ export const query = graphql`
         }
       }
     }
-    desktop2: file(relativePath: { eq: "about-bg-01.jpg" }) {
+    desktop2: file(relativePath: { eq: "turbina4.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
@@ -402,7 +402,7 @@ const Wrapper = styled.section`
       left: 0;
       position: absolute;
       background-color: #000000;
-      opacity: 0.55;
+      opacity: 0.7;
       z-index: -1;
     }
     .about-book-title {

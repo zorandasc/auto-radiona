@@ -8,17 +8,17 @@ import WorkCard from "./WorkCard";
 const Works1 = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(name: { eq: "work" }) {
+      image1: file(name: { eq: "turbina1" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
-      image2: file(name: { eq: "work2" }) {
+      image2: file(name: { eq: "turbina2" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
-      image3: file(name: { eq: "work3" }) {
+      image3: file(name: { eq: "turbina3" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
