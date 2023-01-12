@@ -245,13 +245,13 @@ const MobbileWrapper = styled.section`
       width: 100%;
       height: 100%;
       transition: all 200ms linear 0ms;
-      filter: brightness(60%);
+      filter: brightness(70%);
       &:hover {
         transform: scale(1.45) rotate(-1.5deg);
       }
     }
     .imgClassName {
-      filter: brightness(60%);
+      filter: brightness(70%);
     }
 
     .inner-img-title {
